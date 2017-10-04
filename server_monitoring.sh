@@ -26,3 +26,4 @@ echo "Number of connections:"$conn
 vmst=$(vmstat 1 2 | tail -1 | awk '{print "swap:"$3,"free:"$4}')
 echo "Vmstat output: "$vmst
 unset moodle_dns load_average vmst
+rm /tmp/ram_cache
