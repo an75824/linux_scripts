@@ -1,4 +1,10 @@
 #! /bin/bash
+###############################
+#How to run this script:
+#You may want to add it in Cron
+#Simple command that keeps log of the date:
+#  sh server_monitoring.sh >> $(date +"%Y%m%d")_server.log
+###############################
 echo "===Beginning==="
 #ping -c 1 google.com && echo "Internet connection: OK" || echo "Internet connection: Down"
 #publicip=$(curl -s ipecho.net/plain;)
