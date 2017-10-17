@@ -3,9 +3,13 @@
 * Place this script in MAHARA_DIR/htdocs/admin/cli
 * Access via browser is not allowed
 **/
-
 define('INTERNAL', 1);
 define('CLI', 1);
+if (!isset($argv[1]) || !isset($argv[2]))
+{
+	printf("Missing arguments. Use of this script:\n\t php mahara/htdocs/admin/cli/update_email.php currentemail@example.com newemail@example.com\n") ;
+	exit(1);
+}
 require(dirname(dirname(dirname(__FILE__))) . '/init.php');
 $email='Helloworld@email.dfg';
 $newemail = "Helloworld@email.dfg";
