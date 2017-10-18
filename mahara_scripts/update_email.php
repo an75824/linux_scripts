@@ -22,6 +22,7 @@ if (!$user)
 }
 
 $user_id = $user->id;
+remove_user_sessions($user_id); //log out user
 
 if (!check_usr_new_email($new_email,$user_id))
 {
